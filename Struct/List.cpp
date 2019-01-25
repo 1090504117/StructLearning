@@ -1,12 +1,26 @@
 #include "List.h"
 #include <stdio.h>
 #include <stdlib.h>
+//#include <errno.h>
 
 struct Node
 {
 	ElementType Element;
 	Position Next;
 };
+
+//externed
+List CreatList() {
+	List l = (List)malloc(sizeof(struct Node));
+	if (l == NULL)
+	{
+		printf("out of memory");
+		return NULL;
+	}
+	l->Next = NULL;
+	return l;
+}
+//externed
 
 int IsEmpty(List L)
 {
@@ -17,7 +31,6 @@ int IsLast(Position P,List L)
 {
 	return P->Next == NULL;
 }
-
 
 List MakeEmepty(List L);
 
@@ -57,7 +70,19 @@ void Insert(ElementType ele, List L, Position P)
 	//if (tmpPos == NULL) stderr
 }
 
-void DeleteList(List L);
+void DeleteList(List L) 
+{
+	Position pos, tmp;
+	pos = L->Next;
+	L->Next = NULL;
+	while (pos != NULL)
+	{
+		tmp = pos->Next;
+		free(pos);
+		pos = tmp;
+	}
+}
+
 Position Header(List L);
 Position First(List L);
 Position Advance(Position P);
