@@ -19,8 +19,8 @@ AvlTree MakeEmpty(AvlTree T)
 {
 	if (T != NULL)
 	{
-		MakeEmepty(T->Left);
-		MakeEmepty(T->Right);
+		MakeEmpty(T->Left);
+		MakeEmpty(T->Right);
 		free(T);
 	}
 	return NULL;
@@ -37,6 +37,19 @@ Position Find(ElementType ele, AvlTree T)
 			return Find(ele, T->Right);
 	return T;
 }
+
+Position FindPrevious(ElementType ele, AvlTree T)
+{
+	if (T == NULL || T->Left == NULL || T->Right == NULL) return NULL;
+
+	if (ele < T->Left->Element)
+		return FindPrevious(ele, T->Left);
+	else
+		if (ele > T->Element)
+			return FindPrevious(ele, T->Right);
+	return T;
+}
+
 //最小元
 Position FindMin(AvlTree T)
 {
@@ -82,7 +95,7 @@ static Position SingleRotateWithRight(Position k2)
 	k1->Height = Max(Height(k1->Left),k2->Height) + 1;
 }
 
-//右旋左子树后再左旋；右旋左子树是为了使重心变得更左，之后可以对整个根节点进行左旋
+//右旋左子树后再左旋根节点；右旋左子树是为了使重心变得更左，之后可以对整个根节点进行左旋
 static Position DoubleRotateWithLeft(Position k3)
 {
 	/*Rotate between k1 and k2*/
@@ -153,4 +166,10 @@ static int Height(Position p)
 		return -1;
 	else
 		return p->Height;
+}
+
+
+AvlTree Delete(ElementType ele, AvlTree T)
+{
+	Position pos = FindPrevious(ele, T);
 }

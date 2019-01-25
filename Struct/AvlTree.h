@@ -10,7 +10,7 @@ typedef int ElementType;
 void CreatTree();
 
 //not finish
-AvlTree MakeEmepty(AvlTree T);
+AvlTree MakeEmpty(AvlTree T);
 
 
 Position Find(ElementType ele, AvlTree T);
