@@ -82,6 +82,7 @@ static Position SingleRotateWithLeft(Position k2)
 	k1->Right = k2;
 	k2->Height = Max(Height(k2->Left), Height(k2->Right)) + 1;
 	k1->Height = Max(Height(k1->Left), k2->Height) + 1;
+	return k1;
 }
 
 //右旋，树原先重心偏右，根节点偏左；现将根节点右移一个（取原根节点的右节点作为新的根节点）
@@ -93,6 +94,7 @@ static Position SingleRotateWithRight(Position k2)
 	k1->Left = k2;
 	k2->Height = Max(Height(k2->Left), Height(k2->Right)) + 1;
 	k1->Height = Max(Height(k1->Left),k2->Height) + 1;
+	return k1;
 }
 
 //右旋左子树后再左旋根节点；右旋左子树是为了使重心变得更左，之后可以对整个根节点进行左旋
@@ -172,4 +174,5 @@ static int Height(Position p)
 AvlTree Delete(ElementType ele, AvlTree T)
 {
 	Position pos = FindPrevious(ele, T);
+	return pos;
 }

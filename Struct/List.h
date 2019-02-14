@@ -1,4 +1,5 @@
 #ifndef __LIST_H__
+#define __LIST_H__
 
 struct Node;
 typedef struct Node *PtrToNode;
@@ -12,8 +13,8 @@ List CreatList();
 
 //externed
 
-List MakeEmepty(List L);
-int IsEmpty(List L);
+List MakeEmpty(List L);
+int IsListEmpty(List L);
 int IsLast(Position P,List L);
 Position Find(ElementType ele, List L);
 void Delete(ElementType ele, List L);

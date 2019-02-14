@@ -22,7 +22,7 @@ List CreatList() {
 }
 //externed
 
-int IsEmpty(List L)
+int IsListEmpty(List L)
 {
 	return L->Next == NULL;
 }
@@ -32,7 +32,7 @@ int IsLast(Position P,List L)
 	return P->Next == NULL;
 }
 
-List MakeEmepty(List L);
+List MakeEmpty(List L);
 
 Position Find(ElementType ele, List L)
 {

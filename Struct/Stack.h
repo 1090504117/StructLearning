@@ -1,4 +1,5 @@
 #ifndef __STACK_H__
+#define __STACK_H__
 
 struct Node;
 typedef struct Node *PtrNode;

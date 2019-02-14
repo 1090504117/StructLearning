@@ -1,8 +1,9 @@
 #ifndef __TREE_H__
+#define __TREE_H__
 
-struct TreeNode;
-typedef struct TreeNode *Position;
-typedef struct TreeNode *SearchTree;
+struct MyTreeNode;
+typedef struct MyTreeNode *Position;
+typedef struct MyTreeNode *SearchTree;
 
 typedef int ElementType;
 
@@ -10,7 +11,7 @@ typedef int ElementType;
 void CreatTree();
 
 //not finish
-SearchTree MakeEmepty(SearchTree T);
+SearchTree MakeEmpty(SearchTree T);
 
 
 Position Find(ElementType ele, SearchTree T);

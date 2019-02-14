@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-struct TreeNode
+struct MyTreeNode
 {
 	ElementType Element;
 	SearchTree Left;
@@ -14,8 +14,8 @@ SearchTree MakeEmpty(SearchTree T)
 {
 	if (T != NULL)
 	{
-		MakeEmepty(T->Left);
-		MakeEmepty(T->Right);
+		MakeEmpty(T->Left);
+		MakeEmpty(T->Right);
 		free(T);
 	}
 	return NULL;

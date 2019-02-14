@@ -1,5 +1,5 @@
 #ifndef __CURSOR_H__
-
+#define __CURSOR_H__
 typedef int PtrToNode;
 typedef PtrToNode List;
 typedef PtrToNode Position;
