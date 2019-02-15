@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-struct MyTreeNode
+void MiddleOrder(MyTreeNode *node)
 {
-	ElementType Element;
-	SearchTree Left;
-	SearchTree Right;
-};
+	if (node != NULL) {
+		MiddleOrder(node->Left);
+		printf("%d ", node->Element);
+		MiddleOrder(node->Right);
+	}
+}
 
 SearchTree MakeEmpty(SearchTree T)
 {
@@ -59,7 +60,7 @@ SearchTree Insert(ElementType ele, SearchTree T)
 {
 	if (T == NULL)
 	{
-		T = (SearchTree)malloc(sizeof(SearchTree));
+		T = (SearchTree)malloc(sizeof(MyTreeNode));
 		if (T == NULL)
 		{
 			printf("Out of memory");

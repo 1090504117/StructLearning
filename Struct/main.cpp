@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "QuickSort.h"
 #include "QuickSelect.h"
+#include "AvlTreeToDoubleList.h"
 
 int main()
 {
@@ -14,12 +15,14 @@ int main()
 	*/
 
 
-	///*
+	/*
 	int data[10] = { 4,3,5,6,21,1,11,35,36,23 };
 	int k = 5;
 	QuickSelect(data, k, 0, 9);
 	printf("select num = %d", data[k]);
-	//*/
+	*/
+
+	TestConvert();
 
 	system("pause");
 	return 0;

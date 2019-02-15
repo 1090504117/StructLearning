@@ -1,11 +1,20 @@
 #ifndef __TREE_H__
 #define __TREE_H__
 
-struct MyTreeNode;
+
+typedef int ElementType;
+
 typedef struct MyTreeNode *Position;
 typedef struct MyTreeNode *SearchTree;
 
-typedef int ElementType;
+struct MyTreeNode
+{
+	ElementType Element;
+	SearchTree Left;
+	SearchTree Right;
+};
+
+void MiddleOrder(MyTreeNode *node);
 
 //not finish
 void CreatTree();

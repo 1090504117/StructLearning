@@ -7,13 +7,21 @@ int Max(int a,int b)
 	return a > b ? a : b;
 }
 
-struct AvlNode
+AvlTree CreatAvlTree()
 {
-	ElementType Element;
-	AvlTree Left;
-	AvlTree Right;
-	int Height;
-};
+	AvlTree T = (AvlTree)malloc(sizeof(AvlNode));
+	if (T == NULL)
+	{
+		printf("Out of memory");
+		return NULL;
+	}
+	else
+	{
+		T->Left = T->Right = NULL;
+		T->Height = 0;
+	}
+	return T;
+}
 
 AvlTree MakeEmpty(AvlTree T)
 {
@@ -26,7 +34,7 @@ AvlTree MakeEmpty(AvlTree T)
 	return NULL;
 }
 
-Position Find(ElementType ele, AvlTree T)
+AvlPosition Find(ElementType ele, AvlTree T)
 {
 	if (T == NULL)
 		return NULL;
@@ -38,7 +46,7 @@ Position Find(ElementType ele, AvlTree T)
 	return T;
 }
 
-Position FindPrevious(ElementType ele, AvlTree T)
+AvlPosition FindPrevious(ElementType ele, AvlTree T)
 {
 	if (T == NULL || T->Left == NULL || T->Right == NULL) return NULL;
 
@@ -51,7 +59,7 @@ Position FindPrevious(ElementType ele, AvlTree T)
 }
 
 //最小元
-Position FindMin(AvlTree T)
+AvlPosition FindMin(AvlTree T)
 {
 	if (T == NULL)
 		return NULL;
@@ -63,7 +71,7 @@ Position FindMin(AvlTree T)
 }
 
 //最大元
-Position FindMax(AvlTree T)
+AvlPosition FindMax(AvlTree T)
 {
 	if (T != NULL)
 		while (T->Right != NULL)
@@ -74,9 +82,9 @@ Position FindMax(AvlTree T)
 }
 
 //左旋，树原先重心偏左，根节点偏右；现将根节点左移一个（取原根节点的左节点作为新的根节点）
-static Position SingleRotateWithLeft(Position k2)
+static AvlPosition SingleRotateWithLeft(AvlPosition k2)
 {
-	Position k1;
+	AvlPosition k1;
 	k1 = k2->Left;
 	k2->Left = k1->Right;
 	k1->Right = k2;
@@ -86,9 +94,9 @@ static Position SingleRotateWithLeft(Position k2)
 }
 
 //右旋，树原先重心偏右，根节点偏左；现将根节点右移一个（取原根节点的右节点作为新的根节点）
-static Position SingleRotateWithRight(Position k2)
+static AvlPosition SingleRotateWithRight(AvlPosition k2)
 {
-	Position k1;
+	AvlPosition k1;
 	k1 = k2->Right;
 	k2->Right = k1->Left;
 	k1->Left = k2;
@@ -98,10 +106,10 @@ static Position SingleRotateWithRight(Position k2)
 }
 
 //右旋左子树后再左旋根节点；右旋左子树是为了使重心变得更左，之后可以对整个根节点进行左旋
-static Position DoubleRotateWithLeft(Position k3)
+static AvlPosition DoubleRotateWithLeft(AvlPosition k3)
 {
 	/*Rotate between k1 and k2*/
-	Position k1;
+	AvlPosition k1;
 	k3->Left = SingleRotateWithRight(k3->Left);
 
 	/*Rotate between k3 and k2*/
@@ -109,10 +117,10 @@ static Position DoubleRotateWithLeft(Position k3)
 }
 
 //左旋左子树后再右旋；左旋左子树是为了使重心变得更右，之后可以对整个根节点进行右旋
-static Position DoubleRotateWithRight(Position k3)
+static AvlPosition DoubleRotateWithRight(AvlPosition k3)
 {
 	/*Rotate between k1 and k2*/
-	Position k1;
+	AvlPosition k1;
 	k3->Right = SingleRotateWithLeft(k3->Right);
 
 	/*Rotate between k3 and k2*/
@@ -123,7 +131,7 @@ AvlTree Insert(ElementType ele, AvlTree T)
 {
 	if (T == NULL)
 	{
-		T = (AvlTree)malloc(sizeof(AvlTree));
+		T = (AvlTree)malloc(sizeof(AvlNode));
 		if (T == NULL)
 		{
 			printf("Out of memory");
@@ -162,7 +170,7 @@ AvlTree Insert(ElementType ele, AvlTree T)
 	return T;
 }
 
-static int Height(Position p)
+static int Height(AvlPosition p)
 {
 	if (p == NULL)
 		return -1;
@@ -173,6 +181,6 @@ static int Height(Position p)
 
 AvlTree Delete(ElementType ele, AvlTree T)
 {
-	Position pos = FindPrevious(ele, T);
+	AvlPosition pos = FindPrevious(ele, T);
 	return pos;
 }

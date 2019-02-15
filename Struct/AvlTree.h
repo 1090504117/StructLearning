@@ -1,21 +1,29 @@
 #ifndef __AVL_TREE_H__
 #define __AVL_TREE_H__
-struct AvlNode;
-typedef struct AvlNode *Position;
-typedef struct AvlNode *AvlTree;
 
 typedef int ElementType;
+struct AvlNode;
+typedef struct AvlNode *AvlPosition;
+typedef struct AvlNode *AvlTree;
+
+struct AvlNode
+{
+	ElementType Element;
+	AvlTree Left;
+	AvlTree Right;
+	int Height;
+};
 
 //not finish
-void CreatTree();
+AvlTree CreatAvlTree();
 
 //not finish
 AvlTree MakeEmpty(AvlTree T);
 
 
-Position Find(ElementType ele, AvlTree T);
-Position FindMin(AvlTree T);
-Position FindMax(AvlTree T);
+AvlPosition Find(ElementType ele, AvlTree T);
+AvlPosition FindMin(AvlTree T);
+AvlPosition FindMax(AvlTree T);
 
 AvlTree Insert(ElementType ele, AvlTree T);
 
@@ -23,8 +31,8 @@ AvlTree Insert(ElementType ele, AvlTree T);
 AvlTree Delete(ElementType ele, AvlTree T);
 
 //not finish
-ElementType Retrieve(Position p);
+ElementType Retrieve(AvlPosition p);
 
-static int Height(Position p);
+static int Height(AvlPosition p);
 
 #endif // !__AVL_TREE_H__
