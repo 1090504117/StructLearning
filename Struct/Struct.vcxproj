@@ -116,6 +116,8 @@
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MaxArrayGroup.cpp" />
+    <ClCompile Include="MinStack.cpp" />
     <ClCompile Include="QuickSelect.cpp" />
     <ClCompile Include="QuickSort.cpp" />
     <ClCompile Include="ShellSort.cpp" />
@@ -128,6 +130,8 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="MaxArrayGroup.h" />
+    <ClInclude Include="MinStack.h" />
     <ClInclude Include="QuickSelect.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="ShellSort.h" />

@@ -9,9 +9,10 @@ struct Node
 };
 
 //externed
-Stack CreatStack()
+Stack CreateStack()
 {
 	Stack s;
+	//c语言中这样返回一个指针
 	s = (Stack)malloc(sizeof(struct Node));
 	if (s == NULL)
 	{
@@ -24,7 +25,7 @@ Stack CreatStack()
 
 //externed
 
-void MakeEmepty(Stack S)
+void MakeEmpty(Stack S)
 {
 	if (S == NULL)
 	{
@@ -41,7 +42,12 @@ int IsEmpty(Stack S)
 	return S->Next == NULL;
 }
 
-void DisposeStack(Stack S);
+void DisposeStack(Stack S)
+{
+	MakeEmpty(S);
+	free(S);
+}
+
 void Push(ElementType ele, Stack S) 
 {
 	PtrNode TmpCell;

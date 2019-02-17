@@ -3,6 +3,8 @@
 #include "QuickSort.h"
 #include "QuickSelect.h"
 #include "AvlTreeToDoubleList.h"
+#include "MinStack.h"
+#include "MaxArrayGroup.h"
 
 int main()
 {
@@ -22,7 +24,12 @@ int main()
 	printf("select num = %d", data[k]);
 	*/
 
+	/*
 	TestConvert();
+	*/
+	MinStackTest();
+
+	//MaxArrayGroupTest();
 
 	system("pause");
 	return 0;

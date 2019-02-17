@@ -10,11 +10,11 @@ typedef int ElementType;
 
 
 //externed
-Stack CreatStack();
+Stack CreateStack();
 
 //externed
 
-void MakeEmepty(Stack S);
+void MakeEmpty(Stack S);
 int IsEmpty(Stack S);
 void DisposeStack(Stack S);
 void Push(ElementType ele,Stack S);
