@@ -5,6 +5,7 @@
 #include "AvlTreeToDoubleList.h"
 #include "MinStack.h"
 #include "MaxArrayGroup.h"
+#include "BinaryTreeFindPath.h"
 
 int main()
 {
@@ -24,11 +25,13 @@ int main()
 	printf("select num = %d", data[k]);
 	*/
 
-	TestConvert();
+	//TestConvert();
 	
 	//MinStackTest();
 
 	//MaxArrayGroupTest();
+
+	BinaryTreeFindPathTest();
 
 	system("pause");
 	return 0;

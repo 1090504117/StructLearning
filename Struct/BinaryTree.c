@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "fatal.h"
+#include "bool.h"
 
 void MiddleOrder(SearchTree node)
 {
@@ -12,19 +13,27 @@ void MiddleOrder(SearchTree node)
 	}
 }
 
-SearchTree CreateBinaryTree()
+int IsBinaryTreeLeftNode(SearchTree T)//判断是否为叶子节点
+{
+	if ((NULL == T->Left) && (NULL == T->Right))
+		return true;
+	else
+		return false;
+}
+
+SearchTree BinaryTreeCreate()
 {
 	SearchTree T = (SearchTree)malloc(sizeof(struct BinaryTreeNode));
 	if (T == NULL) Error("there is not enough memory");
 	return T;
 }
 
-SearchTree MakeBinaryTreeEmpty(SearchTree T)
+SearchTree BinaryTreeMakeEmpty(SearchTree T)
 {
 	if (T != NULL)
 	{
-		MakeBinaryTreeEmpty(T->Left);
-		MakeBinaryTreeEmpty(T->Right);
+		BinaryTreeMakeEmpty(T->Left);
+		BinaryTreeMakeEmpty(T->Right);
 		free(T);
 	}
 	return NULL;
@@ -93,5 +102,5 @@ SearchTree InsertBinaryTreeElement(ElementType ele, SearchTree T)
 
 SearchTree DeleteBinaryTreeNode(ElementType ele, SearchTree T)
 {
-
+	return NULL;
 }

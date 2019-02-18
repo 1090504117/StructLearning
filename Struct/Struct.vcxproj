@@ -128,6 +128,8 @@
   <ItemGroup>
     <ClInclude Include="AvlTree.h" />
     <ClInclude Include="AvlTreeToDoubleList.h" />
+    <ClInclude Include="BinaryTreeFindPath.h" />
+    <ClInclude Include="bool.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="fatal.h" />

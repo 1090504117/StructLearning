@@ -98,5 +98,11 @@
     <ClInclude Include="BinaryTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="bool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeFindPath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

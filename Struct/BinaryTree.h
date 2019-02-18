@@ -16,9 +16,11 @@ struct BinaryTreeNode
 
 void MiddleOrder(SearchTree node);
 
-SearchTree CreateBinaryTree();
+int IsBinaryTreeLeftNode(SearchTree T);
 
-SearchTree MakeBinaryTreeEmpty(SearchTree T);
+SearchTree BinaryTreeCreate();
+
+SearchTree BinaryTreeMakeEmpty(SearchTree T);
 
 
 Position FindBinaryTreeElement(ElementType ele, SearchTree T);
