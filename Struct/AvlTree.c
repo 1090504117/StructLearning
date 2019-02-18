@@ -9,7 +9,7 @@ int Max(int a,int b)
 
 AvlTree CreatAvlTree()
 {
-	AvlTree T = (AvlTree)malloc(sizeof(AvlNode));
+	AvlTree T = (AvlTree)malloc(sizeof(struct AvlNode));
 	if (T == NULL)
 	{
 		printf("Out of memory");
@@ -131,7 +131,7 @@ AvlTree Insert(ElementType ele, AvlTree T)
 {
 	if (T == NULL)
 	{
-		T = (AvlTree)malloc(sizeof(AvlNode));
+		T = (AvlTree)malloc(sizeof(struct AvlNode));
 		if (T == NULL)
 		{
 			printf("Out of memory");

@@ -110,25 +110,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AvlTree.cpp" />
-    <ClCompile Include="AvlTreeToDoubleList.cpp" />
-    <ClCompile Include="BubbleSort.cpp" />
-    <ClCompile Include="Cursor.cpp" />
-    <ClCompile Include="List.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MaxArrayGroup.cpp" />
-    <ClCompile Include="MinStack.cpp" />
-    <ClCompile Include="QuickSelect.cpp" />
-    <ClCompile Include="QuickSort.cpp" />
-    <ClCompile Include="ShellSort.cpp" />
-    <ClCompile Include="Stack.cpp" />
-    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="AvlTree.c" />
+    <ClCompile Include="AvlTreeToDoubleList.c" />
+    <ClCompile Include="BinaryTreeFindPath.c" />
+    <ClCompile Include="BubbleSort.c" />
+    <ClCompile Include="Cursor.c" />
+    <ClCompile Include="List.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="MaxArrayGroup.c" />
+    <ClCompile Include="MinStack.c" />
+    <ClCompile Include="QuickSelect.c" />
+    <ClCompile Include="QuickSort.c" />
+    <ClCompile Include="ShellSort.c" />
+    <ClCompile Include="Stack.c" />
+    <ClCompile Include="BinaryTree.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AvlTree.h" />
     <ClInclude Include="AvlTreeToDoubleList.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Cursor.h" />
+    <ClInclude Include="fatal.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MaxArrayGroup.h" />
     <ClInclude Include="MinStack.h" />
@@ -136,7 +138,7 @@
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="ShellSort.h" />
     <ClInclude Include="Stack.h" />
-    <ClInclude Include="Tree.h" />
+    <ClInclude Include="BinaryTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

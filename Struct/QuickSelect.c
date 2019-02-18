@@ -1,5 +1,7 @@
 #include "QuickSelect.h"
 #include "BubbleSort.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 void QuickSelect(int *data,int k, int left, int right)
 {
@@ -8,7 +10,7 @@ void QuickSelect(int *data,int k, int left, int right)
 		int center = Median3(data, left, right);
 		int begin = left;
 		int end = right - 1;
-		while (true)
+		while (1)
 		{
 			//向后扫描数组
 			//由于在选择枢纽时，已经把比枢纽值大的数据放在right位置

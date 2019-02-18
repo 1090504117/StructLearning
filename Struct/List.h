@@ -13,13 +13,13 @@ List CreatList();
 
 //externed
 
-List MakeEmpty(List L);
+List MakeListEmpty(List L);
 int IsListEmpty(List L);
 int IsLast(Position P,List L);
-Position Find(ElementType ele, List L);
-void Delete(ElementType ele, List L);
-Position FindPrevious(ElementType ele, List L);
-void Insert(ElementType ele, List L,Position P);
+Position FindListElement(ElementType ele, List L);
+void ListDeleteElement(ElementType ele, List L);
+Position FindListPrevious(ElementType ele, List L);
+//void Insert(ElementType ele, List L,Position P);
 void DeleteList(List L);
 Position Header(List L);
 Position First(List L);

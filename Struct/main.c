@@ -24,10 +24,9 @@ int main()
 	printf("select num = %d", data[k]);
 	*/
 
-	/*
 	TestConvert();
-	*/
-	MinStackTest();
+	
+	//MinStackTest();
 
 	//MaxArrayGroupTest();
 

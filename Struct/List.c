@@ -32,9 +32,9 @@ int IsLast(Position P,List L)
 	return P->Next == NULL;
 }
 
-List MakeEmpty(List L);
+List MakeListEmpty(List L);
 
-Position Find(ElementType ele, List L)
+Position FindListElement(ElementType ele, List L)
 {
 	Position pos;
 
@@ -43,7 +43,7 @@ Position Find(ElementType ele, List L)
 	return pos;
 }
 
-Position FindPrevious(ElementType ele, List L)
+Position FindListPrevious(ElementType ele, List L)
 {
 	Position pos;
 	pos = L;
@@ -51,10 +51,10 @@ Position FindPrevious(ElementType ele, List L)
 	return pos;
 }
 
-void Delete(ElementType ele, List L)
+void ListDeleteElement(ElementType ele, List L)
 {
 	Position pos, tmpPos;
-	pos = FindPrevious(ele, L);
+	pos = FindListPrevious(ele, L);
 	if (!IsLast(pos,L))
 	{
 		tmpPos = pos->Next;
@@ -63,7 +63,7 @@ void Delete(ElementType ele, List L)
 	}
 }
 
-void Insert(ElementType ele, List L, Position P)
+void InsertList(ElementType ele, List L, Position P)
 {
 	Position tmpPos;
 	tmpPos = (Position)malloc(sizeof(struct Node));

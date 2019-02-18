@@ -15,7 +15,7 @@ MinStack CreateMinStack(int maxSize)
 MinStack MinStackInit(MinStack stack,int maxSize)
 {
 	stack->size = maxSize;
-	stack->data = (MinStackElement*)malloc(sizeof(MinStackElement)*maxSize);
+	stack->data = (MinStack)malloc(sizeof(struct MinStackElement)*maxSize);
 	stack->top = 0;
 	return stack;
 }
@@ -33,7 +33,7 @@ void MinStackPush(MinStack stack, int d)
 		printf("out of stack space.");
 		return;
 	}
-	MinStackElement *p = stack->data + top;
+	struct MinStackElement *p = stack->data + top;
 	p->data = d;
 	p->min = top == 0 ? d : stack->data[top - 1].min;
 	if (p->min > d) p->min = d;

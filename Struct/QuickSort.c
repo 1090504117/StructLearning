@@ -1,12 +1,12 @@
 #include "QuickSort.h"
 #include "BubbleSort.h"
 
-void Swap(int &x, int &y)
+void Swap(int *x, int *y)
 {
 	int temp;
-	temp = x;
-	x = y;
-	y = temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
 
 int Median3(int *data, int left, int right)
@@ -14,14 +14,14 @@ int Median3(int *data, int left, int right)
 	//取数据的头、尾和中间三个数，并对他们进行排序
 	//排序结果直接保存在数组中
 	int center = (left + right) / 2;
-	if (data[left] > data[center])
-		Swap(data[left], data[center]);
-	if (data[left] > data[right])
-		Swap(data[left], data[right]);
-	if (data[center] > data[right])
-		Swap(data[center], data[right]);
+	if (&data[left] > &data[center])
+		Swap(&data[left], &data[center]);
+	if (&data[left] > &data[right])
+		Swap(&data[left], &data[right]);
+	if (&data[center] > &data[right])
+		Swap(&data[center], &data[right]);
 	//把中值，即枢纽与数组倒数第二个元素交换
-	Swap(data[center], data[right - 1]);
+	Swap(&data[center], &data[right - 1]);
 	return data[right - 1];//返回枢纽
 }
 
@@ -34,7 +34,7 @@ void QuickSort(int *data, int left, int right)
 		int center = Median3(data, left, right);
 		int begin = left;
 		int end = right - 1;
-		while (true)
+		while (1)
 		{
 			//向后扫描数组
 			//由于在选择枢纽时，已经把比枢纽值大的数据放在right位置

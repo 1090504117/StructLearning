@@ -15,43 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="AvlTree.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="List.cpp">
+    <ClCompile Include="AvlTreeToDoubleList.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Stack.cpp">
+    <ClCompile Include="BinaryTreeFindPath.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Cursor.cpp">
+    <ClCompile Include="BubbleSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Tree.cpp">
+    <ClCompile Include="Cursor.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AvlTree.cpp">
+    <ClCompile Include="List.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ShellSort.cpp">
+    <ClCompile Include="main.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="QuickSort.cpp">
+    <ClCompile Include="MaxArrayGroup.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BubbleSort.cpp">
+    <ClCompile Include="MinStack.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="QuickSelect.cpp">
+    <ClCompile Include="QuickSelect.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="AvlTreeToDoubleList.cpp">
+    <ClCompile Include="QuickSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MinStack.cpp">
+    <ClCompile Include="ShellSort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MaxArrayGroup.cpp">
+    <ClCompile Include="Stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,9 +66,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Cursor.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AvlTree.h">
@@ -90,6 +90,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MaxArrayGroup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fatal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

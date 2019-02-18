@@ -14,7 +14,7 @@ Stack CreateStack();
 
 //externed
 
-void MakeEmpty(Stack S);
+void MakeStackEmpty(Stack S);
 int IsEmpty(Stack S);
 void DisposeStack(Stack S);
 void Push(ElementType ele,Stack S);

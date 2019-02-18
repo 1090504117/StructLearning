@@ -3,7 +3,7 @@
 
 #define Cutoff 3
 
-void Swap(int &x, int &y);
+void Swap(int *x, int *y);
 
 int Median3(int *data, int left, int right);
 

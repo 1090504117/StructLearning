@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "AvlTree.h"
-#include "Tree.h"
+#include "BinaryTree.h"
 
 
-void ConvertBSTree2List(AvlTree pTreeRoot/*Ê÷µÄ¸ù½Úµã*/, AvlTree &pListHead/*Ë«ÏòÁ´±íµÄÍ·Ö¸Õë*/, AvlTree &pListLast/*Ë«ÏòÁ´±íµÄÎ²Ö¸Õë*/)
+void ConvertBSTree2List(AvlTree pTreeRoot/*Ê÷µÄ¸ù½Úµã*/, AvlTree *pListHead/*Ë«ÏòÁ´±íµÄÍ·Ö¸Õë*/, AvlTree *pListLast/*Ë«ÏòÁ´±íµÄÎ²Ö¸Õë*/)
 {
 	if (pTreeRoot == NULL) return;
 
@@ -14,17 +14,17 @@ void ConvertBSTree2List(AvlTree pTreeRoot/*Ê÷µÄ¸ù½Úµã*/, AvlTree &pListHead/*Ë«Ï
 	// ´¦Àíµ±Ç°½Úµã£¬°Ñ½ÚµãÁ´µ½Ë«ÏòÁ´±íÎ²²¿
 
 	// ÐÞ¸Äµ±Ç°½Úµã×óÖ¸Õë£¬Ö¸ÏòÉÏÒ»´ÎÖÐÐò±éÀú×ó×ÓÊ÷ºóµÄ¶ÓÎ²Ö¸Õë
-	pTreeRoot->Left = pListLast;
-	if (pListLast)		// ·ÇµÚÒ»¸ö½Úµã¼´pListLast²»ÎªNULLµÄ½Úµã
+	pTreeRoot->Left = *pListLast;
+	if (*pListLast)		// ·ÇµÚÒ»¸ö½Úµã¼´pListLast²»ÎªNULLµÄ½Úµã
 	{
-		pListLast->Right = pTreeRoot;	//ÉÏÒ»´ÎÖÐÐò±éÀú×ó×ÓÊ÷ºóµÄ¶ÓÎ²Ö¸ÕëÖ¸Ïòµ±Ç°½Úµã£¨Ë«Á´½ÓÍê³É£©
+		(*pListLast)->Right = pTreeRoot;	//ÉÏÒ»´ÎÖÐÐò±éÀú×ó×ÓÊ÷ºóµÄ¶ÓÎ²Ö¸ÕëÖ¸Ïòµ±Ç°½Úµã£¨Ë«Á´½ÓÍê³É£©
 	}
 	else				// µÚÒ»¸ö½Úµã
 	{
-		pListHead = pTreeRoot;	//headÎªpListLastÎªNULLµÄÊ±ºò£¬Ö»ÓÐÒ»´Î
+		(*pListHead) = pTreeRoot;	//headÎªpListLastÎªNULLµÄÊ±ºò£¬Ö»ÓÐÒ»´Î
 	}
 
-	pListLast = pTreeRoot;	//ÐÞ¸Ä¶ÓÎ²Ö¸ÕëÖ¸ÏòÄ¿Ç°½Úµã
+	*pListLast = pTreeRoot;	//ÐÞ¸Ä¶ÓÎ²Ö¸ÕëÖ¸ÏòÄ¿Ç°½Úµã
 
 	// ÖÐÐò±éÀúÓÒ×ÓÊ÷
 	ConvertBSTree2List(pTreeRoot->Right, pListHead, pListLast);
@@ -39,14 +39,19 @@ void TestConvert()
 	{
 		Insert(num[i], root);
 	}
-	AvlTree head = NULL;
-	AvlTree tail = NULL;
-	ConvertBSTree2List(root, head, tail);
 
 	AvlPosition node = root;
+	MiddleOrder((SearchTree)node);
+	printf("\n");
+	AvlTree head = NULL;
+	AvlTree tail = NULL;
+	ConvertBSTree2List(root, &head, &tail);
+
+	node = root;
 	while (node != NULL)
 	{
 		printf("%d ", node->Element);
 		node = node->Left;
 	}
+	printf("\n");
 }

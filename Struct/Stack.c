@@ -25,7 +25,7 @@ Stack CreateStack()
 
 //externed
 
-void MakeEmpty(Stack S)
+void MakeStackEmpty(Stack S)
 {
 	if (S == NULL)
 	{
