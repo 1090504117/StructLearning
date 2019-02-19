@@ -1,13 +1,6 @@
 #include "QuickSort.h"
 #include "BubbleSort.h"
-
-void Swap(int *x, int *y)
-{
-	int temp;
-	temp = *x;
-	*x = *y;
-	*y = temp;
-}
+#include "Utils.h"
 
 int Median3(int *data, int left, int right)
 {

@@ -2,6 +2,7 @@
 #include "BubbleSort.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "Utils.h"
 
 void QuickSelect(int *data,int k, int left, int right)
 {
@@ -22,14 +23,14 @@ void QuickSelect(int *data,int k, int left, int right)
 			while (data[--end] > center);
 			//把比枢纽小的数据放在前部，大的放到后部
 			if (begin < end)
-				Swap(data[begin], data[end]);
+				Swap(&data[begin], &data[end]);
 			else
 				//已经对要排序的数据都与枢纽比较了一次
 				//把中枢纽保存在适当的位置，因为begin的数一定比枢纽大
 				//所以把这个数放在数组后面
 				//begin一定比center大，begin-1一定比center小，所以这时候交换center和begin的值
 				break;
-			Swap(data[begin], data[right - 1]);
+			Swap(&data[begin], &data[right - 1]);
 		}
 
 		if (k <= begin)

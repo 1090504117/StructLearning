@@ -6,6 +6,7 @@
 #include "MinStack.h"
 #include "MaxArrayGroup.h"
 #include "BinaryTreeFindPath.h"
+#include "HeapSort.h"
 
 int main()
 {
@@ -31,7 +32,9 @@ int main()
 
 	//MaxArrayGroupTest();
 
-	BinaryTreeFindPathTest();
+	//BinaryTreeFindPathTest();
+
+	HeapSortTest();
 
 	system("pause");
 	return 0;

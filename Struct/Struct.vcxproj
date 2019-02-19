@@ -115,6 +115,7 @@
     <ClCompile Include="BinaryTreeFindPath.c" />
     <ClCompile Include="BubbleSort.c" />
     <ClCompile Include="Cursor.c" />
+    <ClCompile Include="HeapSort.c" />
     <ClCompile Include="List.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="MaxArrayGroup.c" />
@@ -124,6 +125,7 @@
     <ClCompile Include="ShellSort.c" />
     <ClCompile Include="Stack.c" />
     <ClCompile Include="BinaryTree.c" />
+    <ClCompile Include="Utils.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AvlTree.h" />
@@ -133,6 +135,7 @@
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="fatal.h" />
+    <ClInclude Include="HeapSort.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="MaxArrayGroup.h" />
     <ClInclude Include="MinStack.h" />
@@ -141,6 +144,7 @@
     <ClInclude Include="ShellSort.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

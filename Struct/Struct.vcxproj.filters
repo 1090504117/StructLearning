@@ -57,6 +57,12 @@
     <ClCompile Include="BinaryTree.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="HeapSort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -102,6 +108,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="BinaryTreeFindPath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapSort.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

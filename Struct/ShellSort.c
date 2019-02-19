@@ -1,4 +1,6 @@
 #include "ShellSort.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 void merge(int *data, int start, int mid, int end, int *result)
 {

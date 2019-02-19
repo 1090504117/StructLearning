@@ -15,7 +15,7 @@ MinStack CreateMinStack(int maxSize)
 MinStack MinStackInit(MinStack stack,int maxSize)
 {
 	stack->size = maxSize;
-	stack->data = (MinStack)malloc(sizeof(struct MinStackElement)*maxSize);
+	stack->data = (struct MinStackElement *)malloc(sizeof(struct MinStackElement)*maxSize);
 	stack->top = 0;
 	return stack;
 }

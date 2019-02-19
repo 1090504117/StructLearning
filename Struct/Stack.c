@@ -44,7 +44,7 @@ int IsEmpty(Stack S)
 
 void DisposeStack(Stack S)
 {
-	MakeEmpty(S);
+	MakeStackEmpty(S);
 	free(S);
 }
 
