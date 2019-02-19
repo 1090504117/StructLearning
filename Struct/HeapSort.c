@@ -29,6 +29,7 @@ void HeapSort(int arr[], int len)
 	for (i = len / 2 - 1; i >= 0; i--)
 		HeapSortMaxHeapify(arr, i, len - 1);
 
+	//这是分界点，如果
 	//先将第一个元素和已排好元素前一位做交换，再重新调整，直到排序完毕
 	for (i = len - 1; i > 0; i--) {
 		Swap(&arr[0], &arr[i]);
