@@ -33,6 +33,6 @@ SearchTree InsertBinaryTreeElement(ElementType ele, SearchTree T);
 SearchTree DeleteBinaryTreeNode(ElementType ele, SearchTree T);
 
 //not finish
-ElementType Retrieve(Position P);
+//ElementType Retrieve(Position P);
 
 #endif // !__BINARY_TREE_H__

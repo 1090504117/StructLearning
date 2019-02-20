@@ -13,7 +13,7 @@ List CreatList();
 
 //externed
 
-List MakeListEmpty(List L);
+List ListMakeEmpty(List L);
 int IsListEmpty(List L);
 int IsLast(Position P,List L);
 Position FindListElement(ElementType ele, List L);

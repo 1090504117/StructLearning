@@ -6,6 +6,9 @@ typedef PtrToNode Position;
 
 typedef int ElementType;
 
+
+/*
+
 void InitializeCursorSpace();
 //externed
 List CreatList();
@@ -22,5 +25,7 @@ Position Header(List L);
 Position First(List L);
 Position Advance(Position P);
 ElementType Retrieve(Position P);
+
+*/
 
 #endif // !__STACK_H__

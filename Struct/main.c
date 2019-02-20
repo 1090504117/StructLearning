@@ -7,6 +7,7 @@
 #include "MaxArrayGroup.h"
 #include "BinaryTreeFindPath.h"
 #include "HeapSort.h"
+#include "BucketSort.h"
 
 int main()
 {
@@ -26,7 +27,7 @@ int main()
 	printf("select num = %d", data[k]);
 	*/
 
-	//TestConvert();
+	//AvlTreeToDoubleListTest();
 	
 	//MinStackTest();
 
@@ -34,7 +35,9 @@ int main()
 
 	//BinaryTreeFindPathTest();
 
-	HeapSortTest();
+	//HeapSortTest();
+
+	BucketSortTest();
 
 	system("pause");
 	return 0;

@@ -19,7 +19,7 @@ void BinaryTreeFindPathPop(pPath L);
 
 void BinaryTreeFindPathPush(pPath L, SearchTree T);
 
-void BinaryTreeFindPath(SearchTree T, int sum, pPath L);
+void BinaryTreeFindPath(SearchTree T, int sum, pPath L, int *record);
 
 void BinaryTreeFindPathTest();
 

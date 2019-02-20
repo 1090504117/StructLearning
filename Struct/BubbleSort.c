@@ -1,6 +1,5 @@
 #include "BubbleSort.h"
 #include <stdio.h>
-#define SIZE 8
 
 void BubbleSort(int a[], int n)
 {
