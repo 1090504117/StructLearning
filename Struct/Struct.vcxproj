@@ -120,6 +120,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="MaxArrayGroup.c" />
     <ClCompile Include="MinStack.c" />
+    <ClCompile Include="MinusZeroPlusSort.c" />
     <ClCompile Include="QuickSelect.c" />
     <ClCompile Include="QuickSort.c" />
     <ClCompile Include="ShellSort.c" />
@@ -139,6 +140,7 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="MaxArrayGroup.h" />
     <ClInclude Include="MinStack.h" />
+    <ClInclude Include="MinusZeroPlusSort.h" />
     <ClInclude Include="QuickSelect.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="ShellSort.h" />

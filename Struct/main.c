@@ -7,6 +7,7 @@
 #include "MaxArrayGroup.h"
 #include "BinaryTreeFindPath.h"
 #include "HeapSort.h"
+#include "MinusZeroPlusSort.h"
 
 int main()
 {
@@ -34,7 +35,9 @@ int main()
 
 	//BinaryTreeFindPathTest();
 
-	HeapSortTest();
+	//HeapSortTest();
+
+	MyMinusZeroPlusSortTest();
 
 	system("pause");
 	return 0;
