@@ -47,6 +47,6 @@ void MyMinusZeroPlusSortTest()
 	int a[] = { 0,-3,-5,4,45,0,234,-34,0,0,0,4 };
 	int num = ArrayIntNum(a);
 	PrintArrayInt(a, num);
-	MinusZeroPlusSort(a,num);
+	MyMinusZeroPlusSort(a,num);
 	PrintArrayInt(a, num);
 }

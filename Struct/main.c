@@ -8,6 +8,7 @@
 #include "BinaryTreeFindPath.h"
 #include "HeapSort.h"
 #include "MinusZeroPlusSort.h"
+#include "BucketSort.h"
 
 int main()
 {
@@ -27,7 +28,7 @@ int main()
 	printf("select num = %d", data[k]);
 	*/
 
-	//TestConvert();
+	//AvlTreeToDoubleListTest();
 	
 	//MinStackTest();
 
@@ -37,7 +38,9 @@ int main()
 
 	//HeapSortTest();
 
-	MyMinusZeroPlusSortTest();
+	//MyMinusZeroPlusSortTest();
+	
+	BucketSortTest();
 
 	system("pause");
 	return 0;

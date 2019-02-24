@@ -3,7 +3,6 @@
 #include "AvlTree.h"
 #include "BinaryTree.h"
 
-
 void ConvertBSTree2List(AvlTree pTreeRoot/*Ê÷µÄ¸ù½Úµã*/, AvlTree *pListHead/*Ë«ÏòÁ´±íµÄÍ·Ö¸Õë*/, AvlTree *pListLast/*Ë«ÏòÁ´±íµÄÎ²Ö¸Õë*/)
 {
 	if (pTreeRoot == NULL) return;
@@ -30,7 +29,7 @@ void ConvertBSTree2List(AvlTree pTreeRoot/*Ê÷µÄ¸ù½Úµã*/, AvlTree *pListHead/*Ë«Ï
 	ConvertBSTree2List(pTreeRoot->Right, pListHead, pListLast);
 }
 
-void TestConvert()
+void AvlTreeToDoubleListTest()
 {
 	AvlTree root = CreatAvlTree();
 	root->Element = 10;

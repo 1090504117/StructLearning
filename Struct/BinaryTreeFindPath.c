@@ -67,11 +67,11 @@ void BinaryTreeFindPathPush(pPath L, SearchTree T) //树节点 入栈
 	q->next = p; //树节点入栈
 }
 
-void BinaryTreeFindPath(SearchTree T, int sum, pPath L,int *record) //查找所有路径
+void BinaryTreeFindPath(SearchTree T, int sum, pPath L,int record) //查找所有路径
 {
 	BinaryTreeFindPathPush(L, T); //将该树节点入栈
-	*record += T->Element;
-	if ((sum == *record) && (IsBinaryTreeLeftNode(T))) //递归+回溯 查找到合适路劲
+	record += T->Element;
+	if ((sum == record) && (IsBinaryTreeLeftNode(T))) //递归+回溯 查找到合适路劲
 		BinaryTreeFindPathPrint(L); // 打印相应的路径
 	
 	if (NULL != T->Left) //继续查找左子树
@@ -80,10 +80,9 @@ void BinaryTreeFindPath(SearchTree T, int sum, pPath L,int *record) //查找所有路
 	if (NULL != T->Right) // 继续查找右子树
 		BinaryTreeFindPath(T->Right, sum, L, record);
 	
-	*record -= T->Element; //回溯		前序遍历的思路，先父节点后子节点，节点完成后删除父节点
+	record -= T->Element; //回溯		前序遍历的思路，先父节点后子节点，节点完成后删除父节点
 	BinaryTreeFindPathPop(L);
 }
-
 
 void BinaryTreeFindPathTest()
 {
@@ -96,5 +95,5 @@ void BinaryTreeFindPathTest()
 	printf("\n");
 	int sum = 22;
 	int record = 0;
-	BinaryTreeFindPath(tree, sum, p,&record);
+	BinaryTreeFindPath(tree, sum, p,record);
 }

@@ -31,7 +31,7 @@ AvlTree Insert(ElementType ele, AvlTree T);
 AvlTree Delete(ElementType ele, AvlTree T);
 
 //not finish
-ElementType Retrieve(AvlPosition p);
+//ElementType Retrieve(AvlPosition p);
 
 static int Height(AvlPosition p);
 

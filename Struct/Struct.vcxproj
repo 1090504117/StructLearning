@@ -114,6 +114,7 @@
     <ClCompile Include="AvlTreeToDoubleList.c" />
     <ClCompile Include="BinaryTreeFindPath.c" />
     <ClCompile Include="BubbleSort.c" />
+    <ClCompile Include="BucketSort.c" />
     <ClCompile Include="Cursor.c" />
     <ClCompile Include="HeapSort.c" />
     <ClCompile Include="List.c" />
@@ -134,6 +135,7 @@
     <ClInclude Include="BinaryTreeFindPath.h" />
     <ClInclude Include="bool.h" />
     <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="BucketSort.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="fatal.h" />
     <ClInclude Include="HeapSort.h" />

@@ -32,7 +32,7 @@ int IsLast(Position P,List L)
 	return P->Next == NULL;
 }
 
-List MakeListEmpty(List L);
+List ListMakeEmpty(List L);
 
 Position FindListElement(ElementType ele, List L)
 {
