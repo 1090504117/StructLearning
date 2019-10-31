@@ -57,6 +57,9 @@
     <ClCompile Include="MergeSort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ListAndVectorTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

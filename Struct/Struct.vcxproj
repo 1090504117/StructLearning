@@ -115,6 +115,7 @@
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="ListAndVectorTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MaxArrayGroup.cpp" />
     <ClCompile Include="MergeSort.cpp" />
