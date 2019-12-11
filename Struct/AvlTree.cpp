@@ -46,6 +46,7 @@ AvlPosition Find(ElementType ele, AvlTree T)
 	return T;
 }
 
+//in fact this function can be delete, no need to use
 AvlPosition FindPrevious(ElementType ele, AvlTree T)
 {
 	if (T == NULL || T->Left == NULL || T->Right == NULL) return NULL;

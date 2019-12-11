@@ -6,6 +6,8 @@
 #include "MinStack.h"
 #include "MaxArrayGroup.h"
 
+#include "BinarySearchTree.h"
+
 int main()
 {
 	/*
@@ -30,6 +32,8 @@ int main()
 	MinStackTest();
 
 	//MaxArrayGroupTest();
+
+	TestBinarySearchTree();
 
 	system("pause");
 	return 0;
